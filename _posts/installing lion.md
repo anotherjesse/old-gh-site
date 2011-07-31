@@ -1,3 +1,10 @@
+---
+title: Configuring Lion
+description: Setting up a new laptop
+layout: post
+category: osx
+---
+
 So you got a new laptop.  Time to make it sing.
 
 # Install:
