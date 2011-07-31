@@ -1,8 +1,7 @@
 ---
-title: Configuring Lion
-description: Setting up a new laptop
-layout: post
-category: osx
+title: Installing Lion
+layout: note
+date: 2011-07-31 21:33:59.454969
 ---
 
 So you got a new laptop.  Time to make it sing.
@@ -52,9 +51,10 @@ Then install some basics:
     brew install unrar
     brew install graphviz
 
-Also Ruby Gems needs updated:
+The basic RubyGems:
 
     sudo gem update --system
+    sudo gem install rdiscount
 
 ## Vim
 
