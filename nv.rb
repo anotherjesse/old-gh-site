@@ -70,6 +70,3 @@ class NV
   end
 
 end
-
-nv = NV.new YAML.load(open('simplenote.yml'))
-nv.build
