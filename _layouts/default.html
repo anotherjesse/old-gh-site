@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/default.css">
+    
+    <title>{{ page.title | strip_html }}</title>
+    {% if page.description %}
+    <meta name="description" content="{{ page.description | xml_escape }}">
+    {% endif %}
+    <meta name="author" content="Jesse Andrews &lt;anotherjesse@gmail.com&gt;">
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta content='initial-scale=1.0' name='viewport'>
+    <link rel="icon" href="/favicon.ico">
+
+    {% if page.styles %}
+    <style type="text/css" media="screen">{{ page.styles }}</style>
+    {% endif %}
+  </head>
+  
+  <body>
+    {{ content }}
+  </body>
+</html>
