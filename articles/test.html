@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Creating an RSS feed with Org mode</title>
+<!-- 2018-10-29 Mon 22:03 -->
+<meta  charset="utf-8">
+<meta  name="generator" content="Org-mode">
+<meta  name="author" content="Jesse Andrews">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="/site/main.css" />
+<link rel="icon" type="image/png" href="/site/icon.png" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+
+<div id="org-div-home-and-up">
+<h2><a href="/">m4ke</a></h2>
+  <nav>
+    <ul>
+      <!-- <li><a accesskey="h" href="/"> Up </a></li>
+ -->
+      <li><a accesskey="a" href="/articles"> Articles </a></li>
+      <li><a accesskey="A" href="/about.html"> About </a></li>
+    </ul>
+  </nav>
+</div>
+<div id="content">
+<h1 class="title">Creating an RSS feed with Org mode</h1>
+<div class="abstract">
+<p>
+A post to announce that this site now has an RSS feed generated from
+the front page's content, and explain how I create it.
+</p>
+
+</div>
+<p>
+For a while I've been wanting to add RSS to this site. Not so much
+because I think the site really needs it, but because it intrigued me
+to figure out to do it using my existing <a href="../2017/blogging-with-org-mode.html">Emacs Org blogging solution</a>.
+</p>
+
+<p>
+In short, I use <a href="https://code.orgmode.org/bzg/org-mode/src/master/contrib/lisp/ox-rss.el">ox-rss.el</a> (from Org mode's contrib) to produce an RSS
+feed from the <a href="../../index.html">home</a> page.  I was delighted that tags on headlines were
+automatically translated into RSS Categories, with no extra work from
+me.  However, I had to jump some hoops to generate a valid and useful
+feed.
+</p>
+
+<p>
+<b>Only <i>top-level</i> headings become items in the RSS feed.</b>
+I had to change the headings I used in my index page to get rid of my
+old top-level headings containing dividing my full list of post into
+their publication year. Not a big loss, I think, as the URL of each
+post contains the year already.
+</p>
+
+<p>
+<b>I wanted the RSS feed to link to the full article page.</b>
+To link to the actual post from the RSS feed (rather than to the copy
+of the abstract on the index page) I had to add <code>RSS_PERMALINK</code> entries
+to each of the headings in the index page. One slightly annoying bit
+about this is that I can't use the <code>.org</code> extension like everywhere
+else, I have to change it to the <code>.html</code> extension it will be when
+published.
+</p>
+
+<p>
+<b>No paragraph content is allowed before the entries.</b>
+Thirdly, the issue of my index page's introductory text not being
+allowed in RSS. Solving this was a bit tricky, but I know that Org has
+a way to tag sections with <code>:noexport:</code> to omit it from being included,
+and with a bit of searching I found a promising <a href="https://emacs.stackexchange.com/a/7578">Emacs StackExchange
+Answer</a> with a macro I was able to adapt to my use. (The macro should
+be all on one line, but I added linebreaks for readability.)
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-org">#+MACRO: no-rss (eval
+ (if
+  (org-export-derived-backend-p
+   org-export-current-backend 'rss)
+   "* COMMENT :noexport:"
+   ""))
+
+{{{no-rss}}}
+I'm Stig Brautaset.  [...]
+</pre>
+</div>
+
+<p>
+What's happening here is that the macro <code>{{{no-rss}}}</code>, when the <code>rss</code>
+export backend is working on this file, will expand to the headline <code>*
+COMMENT :noexport:</code> thus making sure that paragraph does not end up in
+the RSS feed. I have a separate keyword in the file to provide the
+alternative description (and RSS Image URL) for the feed. That looks
+like this:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-org">#+RSS_IMAGE_URL: https://www.brautaset.org/etc/icon.png
+#+DESCRIPTION: I'm Stig Brautaset, and this is my site's RSS feed.
+</pre>
+</div>
+
+<p>
+<b>Getting the publication dates right.</b>
+Getting the publication dates right was just a case of applying elbow
+grease. To do so all I had to do was to update the <code>PUBDATE</code> property
+for each entry in the index page to that of the blog post in question.
+Since I don't have all that many articles this wasn't too difficult.
+For future posts I'll let <code>ox-rss</code> generate the <code>PUBDATE</code> properties,
+since adding them to the index will effectively publish them.
+</p>
+
+<p>
+<b>Conclusion.</b>
+So there you go! I think this was all I had to contend with to produce
+an RSS feed from this blog. I hope you enjoyed this post!  It ended up
+a bit longer than I expected, but there you go.
+</p>
+</div>
+</body>
+</html>
