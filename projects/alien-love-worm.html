@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Alien Love Worms</title>
+<!-- 2018-10-30 Tue 00:51 -->
+<meta  charset="utf-8">
+<meta  name="generator" content="Org-mode">
+<meta  name="author" content="Jesse Andrews">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="/site/main.css" />
+<link rel="icon" type="image/png" href="/site/favicon.ico" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+
+<div id="org-div-home-and-up">
+<h2><a href="/">m4ke</a></h2>
+  <nav>
+    <ul>
+      <!-- <li><a accesskey="h" href="/"> Up </a></li>
+ -->
+      <li><a accesskey="A" href="/about.html"> About </a></li>
+    </ul>
+  </nav>
+</div>
+<div id="content">
+<h1 class="title">Alien Love Worms</h1>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">Inspiration</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Around the time the glowforge was announced, I saw some inspiring art that
+had many layered cuts.  I thought they were paper, turns out they are
+by an artist named <a href="https://gabrielschama.com">Gabriel Schama</a>, and are:
+</p>
+
+<ul class="org-ul">
+<li>huge! many are six to eight feet tall/wide
+</li>
+<li>cut in a (thin) plywood!
+</li>
+</ul>
+
+
+<div class="figure">
+<p><a href="https://gabrielschama.com"><img src="gabriel-website.png" alt="gabriel-website.png"></a>
+</p>
+<p><span class="figure-number">Figure 1:</span> screenshot of Gabriel Schama's website</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">Presenting "Alien Love Worm"</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+For my first design I wanted to do a paper cut.  Living near the
+coast, I wanted to encorporate a whale tail, waves, a peace sign and
+hearts.
+</p>
+
+
+<div class="figure">
+<p><a href="jesse-pic.jpg"><img src="results.jpg" alt="results.jpg"></a>
+</p>
+<p><span class="figure-number">Figure 2:</span> Alien Love Worm ~ <a href="https://www.instagram.com/p/Bpfbaitgdlr/?taken-by=anotherjesse">instagram</a></p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Technology / Process</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+I've been using Adobe Illustrator to build the SVG graphics that I've
+cut so far.  And while I want to explore building designs with code,
+it would add more uncertainity.
+</p>
+
+<p>
+I'm a novice at illustrator, especially getting it to work for the
+glowforge (which only looks at the paths to determine where to
+score/cut.)
+</p>
+
+<p>
+I'm also a novice at composing a "mandala" like pattern in illustrator.
+</p>
+
+<p>
+Using a <a href="http://www.annenbergdl.org/tutorials/how-to-easily-create-mandalas-in-adobe-illustrator/">tutorial showing how to create a mandala</a>, I cobbled together
+an approach that worked for me:
+</p>
+</div>
+
+<div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1">the setup</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>create a wedge that you will repeat in a circle
+</li>
+<li>convert that to a <b>symbol</b>
+</li>
+<li><b>transform/rotate</b> the symbol in your illustration to the next location
+</li>
+<li>repeat using hotkey <b>command d</b> until you have all the sections
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2">building a layer</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>enter editing mode by double clicking on the object using <b>v</b> mode
+</li>
+<li>draw you paths for this layer, using arcs, lines and svg shapes for things likes the tail
+</li>
+<li>spend a long time trying to convert shape to fill (to help visualize layers)
+</li>
+<li>exit editing mode to see the changes apply to all the object in the pattern
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3">rinse and repeat</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>Then I would <b>duplicate</b> the layer in the layers dialog, making sure to select it and lock previous
+</li>
+<li>And <b>duplicate</b> the symbol it used in the symbols dialog
+</li>
+<li>select all the objects in the new layer, and in the <b>properties</b> dialog change the symbol to the new copy
+</li>
+<li>then I would alter/update
+</li>
+</ul>
+
+
+<div class="figure">
+<p><img src="export.png" alt="export.png">
+</p>
+<p><span class="figure-number">Figure 3:</span> final composition as viewed in illustrator</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-3-4" class="outline-3">
+<h3 id="sec-3-4">finish &amp; export</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+After I was completely done (including multiple times messing up which symbol I was editing and many revisions of the design&#x2026;)
+</p>
+
+<ul class="org-ul">
+<li>object/expand all of the symbols.
+</li>
+<li>then I exported each layer to a different svg per layer
+</li>
+<li>then upload to glowforge to cut them
+</li>
+</ul>
+</div>
+
+<div id="outline-container-sec-3-4-1" class="outline-4">
+<h4 id="sec-3-4-1">Download</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<p>
+Here are my 8" square layers: <a href="layer-0.svg">layer-0.svg</a>, <a href="layer-1.svg">layer-1</a>, <a href="layer-2.svg">layer-2.svg</a>, <a href="layer-3.svg">layer-3.svg</a>, <a href="layer-4.svg">layer-4.svg</a>, <a href="layer-5.svg">layer-5.svg</a>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3-5" class="outline-3">
+<h3 id="sec-3-5">experiment and cut</h3>
+<div class="outline-text-3" id="text-3-5">
+<p>
+There were a few pages on the <a href="https://community.glowforge.com/c/beyond-the-manual">glowforge forum</a> discussing cut settings
+(power &amp; speed). This one about <a href="https://community.glowforge.com/t/experiments-cutting-paper-110lb-card-stock/14997">cutting 110lb card stock</a> seemed to be
+right on.  Although I lowered both the speed and the power a bit.  I
+ended up using 400/40 (speed/power) on my glowforge basic.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">Improvements</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+I'm relatively happy with the composition.  And the effect on paper is so much nicer than on the screen.
+</p>
+</div>
+
+<div id="outline-container-sec-4-0-1" class="outline-4">
+<h4 id="sec-4-0-1">Exporting &amp; Cutting</h4>
+<div class="outline-text-4" id="text-4-0-1">
+<p>
+Rather than having one svg per layer&#x2026; having to export, upload,
+setup, &#x2026; I should have realized that each layer was already a
+different stroke color.  This would have enabled exporting once, and
+using glowforge's web ui to select combinations of layers to cut in
+the paper.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-0-2" class="outline-4">
+<h4 id="sec-4-0-2">Illustrator</h4>
+<div class="outline-text-4" id="text-4-0-2">
+<p>
+<a href="https://forums.adobe.com/thread/933555">Joining paths/shapes should be easy</a>.  Just use the <b>pathfinder</b> tool
+right?  Or just use <b>join</b> after direct select&#x2026; I eventually figured
+out a way to get it to work, but it wasn't easy.
+</p>
+
+<p>
+In the end, I spent way too long fixated on getting the fills to look right.
+</p>
+
+<p>
+There has to be a better way to visualize how the cuts will end up
+looking.  (hrm&#x2026; hack idea: visualize the cuts in multiple layers in html/js/svg/&#x2026;)
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-0-3" class="outline-4">
+<h4 id="sec-4-0-3">Wrong approach?</h4>
+<div class="outline-text-4" id="text-4-0-3">
+<ul class="org-ul">
+<li>should I be working in code instead of illustrator for part of the process?
+</li>
+<li>should I be working with gradients/brushes to draw color/depth maps.  Then quantize into layers it at the end?
+</li>
+<li>should I ignore the fills and just look at the stroke colors?
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">Results</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+I'm happy with the initial results.  Especially given the beautiful
+card stock I appropriated from my daughters.
+</p>
+
+
+<div class="figure">
+<p><img src="layers.jpg" alt="layers.jpg">
+</p>
+<p><span class="figure-number">Figure 4:</span> decomposed layers</p>
+</div>
+
+<p>
+I've ordered more card stock, and some frames.  So more experiments soon!
+</p>
+
+
+<p>
+Share your thoughts or ideas for improvements at <a href="https://www.instagram.com/p/Bpfbaitgdlr/?taken-by=anotherjesse">instagram</a>, <a href="https://twitter.com/anotherjesse">twitter</a> or the <a href="https://community.glowforge.com/t/multi-layer-paper-art-alien-love-worm/30933">glowforge community forums</a>.
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>
