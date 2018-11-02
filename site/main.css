@@ -341,7 +341,7 @@ img {
 
 @media (min-width: 600px) {
     body {
-        font-size: large;
+/*        font-size: x-large; */
         max-width: 65ch;
         margin: auto;
     }
