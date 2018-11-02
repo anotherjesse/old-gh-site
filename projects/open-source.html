@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Open Source Projects</title>
+<!-- 2018-11-02 Fri 00:14 -->
+<meta  charset="utf-8">
+<meta  name="generator" content="Org-mode">
+<meta  name="author" content="Jesse Andrews">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="/site/main.css" />
+<link rel="icon" type="image/png" href="/site/favicon.ico" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+
+<div id="org-div-home-and-up">
+<h2><a href="/">m4ke</a></h2>
+  <nav>
+    <ul>
+      <li><a accesskey="A" href="/about.html"> About </a></li>
+      <li><a accesskey="S" href="/sketches/"> Sketches </a></li>
+    </ul>
+  </nav>
+</div>
+<div id="content">
+<h1 class="title">Open Source Projects</h1>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">OpenStack ~ cloud computing</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+It all started when <a href="https://twitter.com/jmckenty">Joshua McKenty</a> called me and asks if I want to
+help on open data projects at NASA.
+</p>
+
+<p>
+We spent over a year trying to cobble together open source tools to
+enable scientists/researchers/engineers/developers.  We wanted to
+enable them to do their awesome science without focusing on all the
+drudgery of running a continous integration service, online code
+repostiories, application servers, online datasets, etc.
+</p>
+
+<p>
+After some very painful attempts at using existing software, we
+grabbed some <a href="http://www.papalote-sf.com/">burritos</a> and started developing what would become the
+compute part of OpenStack.
+</p>
+
+
+<div class="figure">
+<p><img src="open-source/open-stack.jpg" alt="open-stack.jpg">
+</p>
+</div>
+
+<p>
+<a href="https://twitter.com/termie">Andy Smith (termie)</a>, <a href="https://twitter.com/vish">Vish Ishaya Abrams</a>, <a href="https://twitter.com/jmckenty">Joshua McKenty</a>, <a href="https://twitter.com/xtoddx">Todd Willey</a>
+and myself worked to build something we could work for our needs at
+NASA. <a href="https://twitter.com/soosiechoi">Soo Choi</a> kept our company and the project moving forward at
+NASA, including mountains of paperwork and process needed to do
+"agile" the NASA way.
+</p>
+
+<p>
+We switched over to running VMs for <a href="https://www.data.gov/">data.gov</a> and a collection of NASA
+projects. Eventually we combined forces with <a href="https://www.rackspace.com/">Rackspace</a>'s object
+storage project to create the initial release of OpenStack.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">UserScripts.org ~ powerups for your browser</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<a href="http://www.aaronboodman.com/">Aaron Boodman</a> created Greasemonkey in 2005.  I feel in love.  All of a
+sudden any user could inject code into any webpage they visited.
+Making the web yours!
+</p>
+
+<p>
+Mashups.  User Customization.  Powerups.
+</p>
+
+<p>
+I created this site with <a href="https://twitter.com/bs">Britt Selvitelle</a> to help share and find scripts.
+</p>
+
+<p>
+It was based on Ruby on Rails.  At its peak it had tens of thousands
+of scripts, millions of monthly visitors, and an extremely active api.
+</p>
+
+
+<div class="figure">
+<p><img src="open-source/userscripts-org.png" alt="userscripts-org.png">
+</p>
+</div>
+
+<p>
+I really miss this project.  I loved working on it.  I loved how
+much power it gave to users.  I loved working on all aspects of a
+website from sys-admin to front-end design.
+</p>
+
+<p>
+I had to shut it down due to the combination of life events, legal
+threats and increasing sophistication from "baddies" trying to abuse
+users (scripts running in the browser context could steal cookies or worse.)
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Book Burro</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Book Burro started as a Greasemonkey extension to help me find books
+in gradschool.  It evolved to extensions for Firefox and Chrome.
+</p>
+
+<blockquote>
+<p>
+Book Burro was a Web 2.0 extension for Firefox. When it sensed you
+were looking at a page that contains a book, it overlayed a small
+panel which when opened lists prices at online bookstores such as
+Amazon, Buy, Half (and many more) and whether the book is available at
+your library.
+</p>
+</blockquote>
+
+
+<div class="figure">
+<p><img src="open-source/book-burro.png" alt="book-burro.png">
+</p>
+</div>
+
+<p>
+It leveraged APIs when possible, but resorted to scraping book stores
+and libraries.  Additionally users could add scraping rules to check
+their library and share it with the rest of the community.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">Wii Me</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+When the Nintendo Wii were released, they were extremely hard to get.
+Even months later, sellers including Amazon would run of of stock
+almost as soon as they got them in.
+</p>
+
+
+<div class="figure">
+<p><img src="open-source/wiime.jpg" alt="wiime.jpg">
+</p>
+</div>
+
+<p>
+A few lines of ruby code, querying the amazon e-commerce API
+(determining if the Wii was in stock), if so, tweeting it out
+<a href="https://web.archive.org/web/20081203212822/https://twitter.com/WiiMe">twitter.com/WiiMe ~ archive.org</a>&#x2026;
+</p>
+
+<p>
+I got a Wii.  I also helped a few hundred other people get theirs. I
+was happy to see <a href="https://web.archive.org/web/20080516135020/https://evhead.com/2007/12/i-love-this-twitter-wiime-i-check.asp">Ev Williams</a> share his love of it :)
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">s3://</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+This is an extension that made Amazon S3 links work in Mozilla Firefox.
+</p>
+
+
+<div class="figure">
+<p><img src="open-source/s3.png" alt="s3.png">
+</p>
+</div>
+
+
+<p>
+You could drag-and-drop to upload.  Bookmark.  And the url bar would
+have the s3://bucket/key name in it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6">Taboo ~ the cure for tabitis</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Taboo was an extension for Firefox that utilied the "save session" code to put tabs to sleep.
+</p>
+
+<p>
+When the user clicked "save", it would take a screenshot, save the tab
+state (similar to how scroll position, etc is saved when you restart
+your browser), and save the text content of the page.
+</p>
+
+<p>
+Then you could search through the saved tabs (including full-text search)
+</p>
+
+
+<div class="figure">
+<p><img src="open-source/taboo.png" alt="taboo.png">
+</p>
+</div>
+
+<p>
+Taboo was created when extensions were given full priviledges in
+browsers.  I was able to reach into lots of internals to add this
+functionality.  Sandboxing of extensions and a real API limit these
+sort of ideas from being implemented now-a-days.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7">Tux Typing</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Because my focus in college/grad school was topics other than
+programming, I started contributing to open source.  Eventually I
+found a typing game I started contributing to:
+</p>
+
+
+<div class="figure">
+<p><img src="open-source/tux-typing.jpg" alt="tux-typing.jpg">
+</p>
+</div>
+
+<p>
+Eventually I was promoted to project lead.  I learned a lot about game
+programming.  SDL.  Building and shipping on multiple platforms.
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>
