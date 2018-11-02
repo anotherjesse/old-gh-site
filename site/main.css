@@ -341,7 +341,7 @@ img {
 
 @media (min-width: 600px) {
     body {
-        font-size: x-large;
+        font-size: large;
         max-width: 65ch;
         margin: auto;
     }
@@ -361,6 +361,12 @@ caption.t-above {
 
 #footnotes {
     border-top: 1px solid grey;
+}
+
+.blockquote {
+    border-left: 5px solid #ccc;
+    margin-left: 0;
+    padding-left: 1em;
 }
 
 
